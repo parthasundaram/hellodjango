@@ -10,5 +10,5 @@
     "start_longitude":  "-122.402367",
     "end_latitude": "37.744352",
     "end_longitude": "-122.416743",
-    "redirect_uri": "http://localhost:8000/uber/submit"
+    "redirect_uri": "https://gentle-oasis-9626.herokuapp.com/uber/submit"
 }
