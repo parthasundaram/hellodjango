@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load uber_extras %}
+
+
+<html>
+    <head>
+        <script src="{% static 'uber/utils_1.js' %}"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  
+		<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">  
+	</head>
+    <body>
+    	<div class="container-fluid">
+    		<div class="jumbotron">
+			  <h1>Uber Date</h1>
+			  <p> Tell us who you are and we'll pair you with someone else who rides on the same route </p>
+<!--				<img src="{% static 'tutorial/images/UBER_API_Badges_1x_78px.png' %}" alt="My image"/> -->
+				<p><a class="btn btn-primary btn-lg" onclick="action('start_oauth')" role="button">Sign-in to Uber</a></p>
+			</div>
+	    </div>
+    </body>
+</html>
