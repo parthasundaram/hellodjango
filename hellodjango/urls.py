@@ -8,5 +8,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^uber/', include('uber.urls')),
-#    url(r'^yelp/', include('yelp_platform.urls')),
+	url(r'^yelp/', include('yelp_platform.urls')),
 )
