@@ -3,5 +3,9 @@ from django.contrib import admin
 from yelp_platform import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name ='index'),
+	# Examples:
+    # url(r'^$', 'apis.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+    url(r'^activate$', views.activate, name ='activate'),
+    url(r'^deactivate$', views.deactivate, name ='deactivate'),
 )

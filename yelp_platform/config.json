@@ -1,5 +1,5 @@
 {
-    "data_ingestion_url": "https://partner-api.yelp.com/v1/ingest/",
+    "data_ingestion_url": "https://partner-api.yelp.com/v1/ingest/create",
     "checkout_url": "https://login.uber.com/oauth/authorize",
-    "yelp_business_id": "hHhPJZf9PIx3XSmHVbe7CA",
+    "yelp_business_id": "hHhPJZf9PIx3XSmHVbe7CA"
 }
