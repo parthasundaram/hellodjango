@@ -4,8 +4,8 @@ from django.db import models
 class Business(models.Model):
 	business_name = models.CharField(max_length = 254)
 	address1 = models.CharField(max_length = 254)
-	address2 = models.CharField(max_length = 254, null=True)
-	address3 = models.CharField(max_length = 254, null=True)
+	address2 = models.CharField(max_length = 254, null=True, blank=True)
+	address3 = models.CharField(max_length = 254, null=True, blank=True)
 	city = models.CharField(max_length = 254)
 	country = models.CharField(max_length = 254)
 	phone = models.CharField(max_length = 254)
