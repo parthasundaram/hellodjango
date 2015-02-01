@@ -12,6 +12,7 @@ class Business(models.Model):
 	postal_code = models.CharField(max_length = 254)
 	state = models.CharField(max_length = 254)
 	yelp_business_id = models.CharField(max_length = 254)
+	partner_business_id = models.CharField(max_length = 254, primary_key=True)
 
 	def __str__(self):
 		return self.business_name 
