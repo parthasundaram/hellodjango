@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^activate$', views.activate, name ='activate'),
     url(r'^deactivate$', views.deactivate, name ='deactivate'),
     url(r'^checkout_fulfillment/v2/check_availability$', views.check_availability, name='check_availability'),
+    url(r'^(?P<business_id>\d+)', views.iframe_load, name='iframe_load'),
 )
