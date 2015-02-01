@@ -12,7 +12,7 @@ config = json.load(json_config)
 
 def iframe_load(request, business_id):
 
-	business = Business.objects.get(partner_business_id = buiness_id)
+	business = Business.objects.get(partner_business_id = business_id)
 
 	# extract all the GET parameters
 	opportunity_token = request.GET.get('opportunity_token')
