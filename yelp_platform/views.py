@@ -10,7 +10,13 @@ json_config = open('yelp_platform/config.json')
 config = json.load(json_config)
 
 def iframe_load(request, business_id):
-	return HttpResponse(business_id)
+
+	opportunity_token = request.GET.get('opportunity_token')
+	yelp_site = request.GET.get('yelp_site')
+	yelp_locale = request.GET.get('yelp_locale')
+
+	return HttpResponse("This " + business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_locale)
+
 
                                        
 @csrf_exempt 
