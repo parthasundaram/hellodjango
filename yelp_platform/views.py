@@ -25,7 +25,6 @@ def iframe_load(request, business_id):
 
 	#return HttpResponse("This " + business['name'] + " " +  business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_localeg)
 
-
                                        
 @csrf_exempt 
 def check_availability(request):
@@ -74,7 +73,7 @@ def activate(request):
     # to-do remove the creds and store it in settings
 	response = requests.post(
 		config.get('data_ingestion_url'),
-		auth=("yelp_dogfood", "mK6SxfPTEkSy9M46"),
+		auth=("partner_name", "partner_di_creds"),
 		data=json.dumps(payload),
 		headers=headers,
 	)
@@ -96,7 +95,7 @@ def deactivate(request):
     # swap the code for an access token that grants the appropriate privilege needed
 	response = requests.post(
 		config.get('data_ingestion_url'),
-		auth=("yelp_dogfood", "mK6SxfPTEkSy9M46"),
+		auth=("partner_name", "partner_di_creds"),
 		data=json.dumps(payload),
 		headers=headers,
 	)
