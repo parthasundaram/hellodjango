@@ -4,11 +4,14 @@ from django.conf import settings
 from urlparse import urlparse
 import requests, json, datetime
 import urllib
-
+from django.views.decorators.csrf import csrf_exempt   
 
 json_config = open('yelp_platform/config.json')
 config = json.load(json_config)
 
+
+                                       
+@csrf_exempt 
 def check_availability(request):
 	response_data = {}
 	response_data['availability_status'] = 'available'
