@@ -12,7 +12,7 @@ config = json.load(json_config)
 def check_availability(request):
 	response_data = {}
 	response_data['availability_status'] = 'available'
-	return HttpResponse(json.dumps(response_data), content_type="application/json")
+	return HttpResponse(json.dumps(response_data), mime_type="application/json")
 
 def generate_di_payload(active):
 	payload = {
