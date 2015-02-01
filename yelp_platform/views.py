@@ -9,8 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 json_config = open('yelp_platform/config.json')
 config = json.load(json_config)
 
-def iframe_load(request, biz_id):
-	return HttpResponse(biz_id)
+def iframe_load(request, business_id):
+	return HttpResponse(business_id)
 
                                        
 @csrf_exempt 
