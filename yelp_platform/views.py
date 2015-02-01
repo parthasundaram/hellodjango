@@ -4,18 +4,23 @@ from django.conf import settings
 from urlparse import urlparse
 import requests, json, datetime
 import urllib
-from django.views.decorators.csrf import csrf_exempt   
+from django.views.decorators.csrf import csrf_exempt  
+from yelp_platform.models import Business 
 
 json_config = open('yelp_platform/config.json')
 config = json.load(json_config)
 
 def iframe_load(request, business_id):
 
+	business = Business.objects.get(partner_business_id = buiness_id)
+
+	# extract all the GET parameters
 	opportunity_token = request.GET.get('opportunity_token')
 	yelp_site = request.GET.get('yelp_site')
 	yelp_locale = request.GET.get('yelp_locale')
 
-	return HttpResponse("This " + business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_locale)
+
+	return HttpResponse("This " + business['name'] + " " +  business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_localeg)
 
 
                                        
