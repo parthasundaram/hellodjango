@@ -12,15 +12,18 @@ config = json.load(json_config)
 
 def iframe_load(request, business_id):
 
+	#look up the business from local storage
 	business = Business.objects.get(partner_business_id = business_id)
 
 	# extract all the GET parameters
+	# look up opportunity details if needed
 	opportunity_token = request.GET.get('opportunity_token')
 	yelp_site = request.GET.get('yelp_site')
 	yelp_locale = request.GET.get('yelp_locale')
 
+	return render(request, 'yelp_platform/home.html', {'opportunity_token': opportunity_token, 'yelp_site': yelp_site, 'yelp_locale': yelp_locale})
 
-	return HttpResponse("This " + business['name'] + " " +  business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_localeg)
+	#return HttpResponse("This " + business['name'] + " " +  business_id + " " + opportunity_token + " " + yelp_site + " " + yelp_localeg)
 
 
                                        
